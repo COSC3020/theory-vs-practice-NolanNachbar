@@ -10,22 +10,23 @@
   elements takes 5 seconds. Given what you know about the asymptotic complexity
   of search in a binary search tree, how long would you guess finding the same
   element in a search tree with 10,000 elements takes? Explain your reasoning.
-  
+
 We know for binary search the average time complexity is  $O(log n)$. Since this is a binary search tree,  $O(log_2 n)$. So:
 $\frac{\log_{2}10000}{\log_{2}1000} = \frac{4}{3}$ so $5*\frac{4}{3} \approx 6.667$ seconds.
 
 - You measure the time with 10,000 elements and it takes 100 seconds! List 3
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
-  For a 
 Add your answers to this markdown file.
 
-1. The time complexity of $O(log_2 n)$ is for the average case, in the worst case it has a complexity of $O(n)$. The tree might not be balanced so it could have to search every element before it finds it. The machine might take 100 seconds for $O(10,000)$
-2. 
-3. 
-   
-I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+1. The time complexity of $O(log_2 n)$ is for the average case; in the worst case it has a complexity of $O(n)$. The tree might not be balanced, so it could have to search every element before it finds it. The machine might take 100 seconds for $O(10,000)$
+2. The computer that the search is run on may have hardware constraints. For example, a computer with a small amount of RAM may need paging to run the search.
+3. Compiler optimizations: depending on the language, compiler, and implementation you use, the time to run the search can vary. The binary search may be recursive, and the compiler may not be using tail call optimization. This can lead to a very inefficient runtime on one machine, while using tail recursion on that same machine will be much faster. 
 
 I used this site to review things like the time complexity of binary search.
 https://www.geeksforgeeks.org/complexity-analysis-of-binary-search/
+
 I also used the lecture slides.
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
