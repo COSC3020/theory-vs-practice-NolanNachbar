@@ -19,14 +19,17 @@ $\frac{\log_{2}10000}{\log_{2}1000} = \frac{4}{3}$ so $5*\frac{4}{3} \approx 6.6
   complexity suggests a different time.
 Add your answers to this markdown file.
 
-1. The time complexity of $O(log_2 n)$ is for the average case; in the worst case it has a complexity of $O(n)$. The tree might not be balanced, so it could have to search every element before it finds it. The machine might take 100 seconds for $O(10,000)$. $\log_2 10,000 \approx 13$ and $\frac{n}{\log_2 n} = \frac{10,000}{\log_2 10,000} \approx 753$ So if the search is $O(n)$ it would take about 753x as many comparisons as the $O(\log n)$ suggests. 
-2. The computer that the search is run on may have hardware constraints. For example, a computer with a small amount of RAM may need paging to run the larger search.
-3. 
+1. The time complexity of $O(log_2 n)$ is for the average case; in the worst case it has a complexity of $O(n)$. The tree might not be balanced, it could have to search every element before it finds it. The machine might take 100 seconds for $O(10,000)$. $\log_2 10,000 \approx 13$ and $\frac{n}{\log_2 n} = \frac{10,000}{\log_2 10,000} \approx 753$ So if the search is more like $O(n)$ it could take up to about 753x as many comparisons as the $O(\log n)$ suggests. 
+2. The computer that the searches are run on may have hardware constraints. For example, a computer with a small amount of RAM may need paging to run the larger search. It could be that this does not affect the tree with $1,000$ elements but it does the tree with $10,000$.
+3. The conditions of the the envirnment might be different. Things like the language, compiler, and implementation you use can affect the runtimes. If the first test was ran using a certain language on one machine and then the $10,000$ element test was ran on a less powerful machine even with the same code, it might take much longer to run. In order to see the expected asymptotic based results you would need to ensure things like the software and hardware limitations don't effect the larger tree more than they do the small one and vice versa. 
 
 I used this site to review things like the time complexity of binary search.
 https://www.geeksforgeeks.org/complexity-analysis-of-binary-search/
 
 I also used the lecture slides.
+
+I used looked at this to help come up with a third reason the search tooks 100 seconds.
+https://github.com/COSC3020/theory-vs-practice-Assel-Aljazwe
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
